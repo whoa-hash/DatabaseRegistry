@@ -1,0 +1,61 @@
+
+<!--Store this code in 'update.html' file inside the 'templates' folder-->
+<html lang="en">
+    <head>
+        <title>update</title>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body bgcolor="#e6ffee">
+        <div class="one">
+            <div class="two">
+                <h1>Side Bar</h1>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Index</a></li>
+                    <li><a href="{{url_for('display')}}">Display</a></li>
+                    <li class="active"><a href="{{url_for('update')}}">Update</a></li>
+                    <li><a href="{{url_for('logout')}}">Log out</a></li>
+                    <li><a href="{{ url_for('delete')}}">Delete Account</a></li>
+                    <li><a href="{{ url_for('retrieve')}}">Search</a></li>
+                </ul>
+            </div>
+            <div class="content" align="center">
+                <div class="topbar">
+                    <h2>Welcome!! You are in Update Page!! </h2>
+                </div></br></br>
+                <div class="contentbar">
+                  <h1>Click on an item to search</h1></br>
+              <form action="{{ url_for('retrieve') }}" method="post" autocomplete="off">
+                    <div class="msg">{{ msg }}</div>
+                      <input type="number" name="min_age" placeholder="Mininum age" class="textbox" id="age" required></br></br>
+                  <input type="number" name="max_age" placeholder="Maximum age" class="textbox" id="age" required></br></br>
+
+<select id="mySelect" name = "hashkafa">
+      <option value="yeshivish">yeshivish</option>
+      <option value="chasidish">chasidish</option>
+      <option value="modern">modern</option>
+      <option value="lubavitch">lubavitch</option>
+        <option value="modern-orthodox">modern-orthodox</option>
+        <option value="modern-orthodox (liberal)">modern-orthodox (liberal)</option>
+      <option value="modern-orthodox (machmir)">modern-orthodox (machmir)</option>
+      <option value="modern-orthodox middle-road">modern-orthodox middle-of-the-road</option>
+      <option value="satmar">satmar</option>
+        <option value="vizhnitz">vizhnitz</option>
+         <option value="bobov">bobov</option>
+      <option value="charedi">charedi</option>
+        <option value="dati leumi">dati leumi</option>
+        <option value="modern yeshivish">modern yeshivish</option>
+      <option value="centrist">centrist</option>
+      <option value="orthodox">orthodox</option>
+      <option value="frum">frum</option>
+        <option value="not sure">not sure</option>
+
+    </select>
+
+                    <input type="submit" class="btn" value="retrieve">
+              </form>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div class="msg">{{ msg }}</div>
+    <ol>
+<!-- For loop logic of like-minded hashkafa people -->
+{%for i in range(0, rowcount)%}
+
+          <table class="worddark"></br></br></br></br>
+                                <tr>
+                                    <td>Name:</td>
+                                    <td>{{ person_table[i]['full_name'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Gender:</td>
+                                    <td>{{ person_table[i]['gender'] }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Age:</td>
+                                    <td>{{ person_table[i]['age'] }}</td>
+                                </tr>
+
+                                <tr>
+                                    <td>Height:</td>
+                                    <td>{{ person_table[i]['height'] }}</td>
+                                </tr>
+                            </table>
+
+{%endfor%}
+
+</ol>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+<!--Store this code in 'update.html' file inside the 'templates' folder-->
+<html lang="en">
+    <head>
+        <title>update</title>
+        <link rel="stylesheet" href="../static/style.css">
+    </head>
+    <body bgcolor="#e6ffee">
+        <div class="one">
+            <div class="two">
+                <h1>Side Bar</h1>
+                <ul>
+                    <li><a href="{{url_for('index')}}">Index</a></li>
+                    <li><a href="{{url_for('display')}}">Display</a></li>
+                    <li class="active"><a href="{{url_for('update')}}">Update</a></li>
+                    <li><a href="{{url_for('logout')}}">Log out</a></li>
+                    <li><a href="{{ url_for('delete')}}">Delete Account</a></li>
+                    <li><a href="{{ url_for('retrieve')}}">Search</a></li>
+                </ul>
+            </div>
+            <div class="content" align="center">
+                <div class="topbar">
+                    <h2>Welcome!! You are in Delete Page!! </h2>
+                </div></br></br>
+                <div class="contentbar">
+                  <h1>Fill Your Details to Delete</h1></br>
+              <form action="{{ url_for('delete') }}" method="get" autocomplete="off">
+                    <div class="msg">{{ msg }}</div>
+                    <input type="text" name="user_name" placeholder="Enter Your Username" class="textbox" id="user_name" required></br></br>
+                    <input type="password" name="pwd" placeholder="Enter Your Password" class="textbox" id="pwd" required></br></br>
+
+                    <input type="submit" class="btn" value="Delete">
+              </form>
+                </div>
+
+            </div>
+        </div>
+    </body>
+</html>
